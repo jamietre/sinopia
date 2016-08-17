@@ -6,12 +6,28 @@
 * Fixes tests when running on windows
 * Removes dependency on fs-ext
 
-## To build:
 
-yapm doesn't play nicely with npm@3. If using npm3, do this to install:
+## To build/test:
 
-    js-yaml package.yaml > package.json
     npm install
+    grunt browserify
+    grunt less
+    node ./bin/sinopia
+
+## To deploy:
+
+    npm install -g ./
+
+## Versions
+
+#### 1.4.1
+
+* Remove YAML dependency
+* Add links for URL and copy to clipboard
+
+#### Forked from original at 1.3.7.
+
+
 
 ## Original readme
 
