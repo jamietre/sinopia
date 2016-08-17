@@ -17,6 +17,25 @@
   margin: 0;
   padding: 0;
 
+  .git-logo {
+      min-width: 18px;
+      max-width: 18px;
+      min-height: 18px;
+      max-height: 18px;
+      background-image: url(./GIT_icon.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      display: inline-block;
+  }
+
+  .clipboard {
+    cursor: pointer;
+  }
+  .clipboard:active {
+    fill: #00ff00;
+  }
+
   .main-header {
     background: @white;
 
@@ -24,6 +43,7 @@
       margin-bottom: 0;
     }
 
+  
     .npm-logo {
       width: 79px;
       height: @mainHeaderHeight;
@@ -194,4 +214,8 @@
 
 .inline-block {
   display: inline-block;
+}
+
+.align-bottom {
+  vertical-align: bottom;
 }

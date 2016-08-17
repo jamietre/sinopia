@@ -7232,6 +7232,23 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
   margin: 0;
   padding: 0;
 }
+.body .git-logo {
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  background-image: url(GIT_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: inline-block;
+}
+.body .clipboard {
+  cursor: pointer;
+}
+.body .clipboard:active {
+  fill: #00ff00;
+}
 .body .main-header {
   background: #ffffff;
 }
@@ -7385,6 +7402,9 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 }
 .inline-block {
   display: inline-block;
+}
+.align-bottom {
+  vertical-align: bottom;
 }
 @media (max-width: 992px) {
   .body .main-header .npm-logo {
