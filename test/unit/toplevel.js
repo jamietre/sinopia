@@ -3,9 +3,10 @@ var express = require('express')
 var request = require('request')
 var rimraf  = require('rimraf')
 var sinopia = require('../../')
+var path = require("path")
 
 var config = {
-  storage: __dirname + '/test-storage',
+  storage: path.resolve(__dirname,'test-storage'),
   packages: {
     '*': {
       allow_access: '$all',
@@ -14,19 +15,19 @@ var config = {
   logs: [
     {type: 'stdout', format: 'pretty', level: 'fatal'}
   ],
+  self_path: __dirname
 }
 
 describe('toplevel', function() {
   var port
 
   before(function(done) {
-    rimraf(__dirname + '/test-storage', done)
+    rimraf(config.storage, done)
   })
 
   before(function(done) {
     var app = express()
     app.use(sinopia(config))
-
     var server = require('http').createServer(app)
     server.listen(0, function() {
       port = server.address().port

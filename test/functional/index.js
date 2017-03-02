@@ -25,10 +25,10 @@ describe('Func', function() {
   before(function (cb) {
     async.parallel([
       function (cb) {
-        require('./lib/startup').start('./test-storage', './config-1.yaml', cb)
+        require('./lib/startup').start('./test-storage', './config-1.json', cb)
       },
       function (cb) {
-        require('./lib/startup').start('./test-storage2', './config-2.yaml', cb)
+        require('./lib/startup').start('./test-storage2', './config-2.json', cb)
       },
     ], cb)
   })
@@ -49,6 +49,7 @@ describe('Func', function() {
 
           getTaskFiles(Number(server.pid), function(err, result) {
             assert.equal(err, null)
+            if (result === "windows") return resolve();
             server.fdlist = result.replace(/ +/g, ' ')
             resolve()
           })
@@ -86,6 +87,7 @@ describe('Func', function() {
     async.map([ server, server2 ], function(server, cb) {
       getTaskFiles(Number(server.pid), function(err, result) {
         assert.equal(err, null)
+        if (result === "windows") return cb();
         result = result.split('\n').filter(function(q) {
           if (q.match(/TCP .*->.* \(ESTABLISHED\)/)) return false
           if (q.match(/\/libcrypt-[^\/]+\.so/)) return false

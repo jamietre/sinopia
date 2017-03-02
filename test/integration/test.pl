@@ -21,7 +21,7 @@ sub quit {
 
 # run sinopia in a child process
 if (($pid = fork()) == 0) {
-	exec "../../../bin/sinopia ../config.yaml";
+	exec "../../../bin/sinopia ../config.json";
 	die "exec failed";
 }
 

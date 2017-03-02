@@ -23,7 +23,7 @@ function test(file) {
       inner.split('/').forEach(function(x) {
         if (m[1] === 'param') {
           params[x] = 'ok'
-        } else if (t = x.match(/^:([^?:]*)\??$/)) {
+        } else if (t = x.match(/^:([^?:]*)\??$/), t) {
           params[t[1]] = params[t[1]] || m[0].trim()
         }
       })
