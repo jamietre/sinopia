@@ -5,6 +5,7 @@ try {
   // optional, won't be available on windows
   var crypt3 = require('crypt3')
 } catch(err) {
+  //ignore
 }
 
 try {
