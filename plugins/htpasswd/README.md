@@ -10,16 +10,16 @@ PS: Actually, this module is bundled with sinopia, so you don't have to install 
 
 ## Config
 
-Add to your `config.yaml`:
+Add to your `config.json`:
 
-```yaml
-auth:
-  htpasswd:
-    file: ./htpasswd
+```json
+"auth": {
+  "htpasswd": {
+    "file": "./htpasswd",
 
-    # Maximum amount of users allowed to register, defaults to "+inf".
-    # You can set this to -1 to disable registration.
-    #max_users: 1000
+    // Maximum amount of users allowed to register, defaults to "+inf".
+    // You can set this to -1 to disable registration.
+    // "max_users": 1000,
 ```
 
 ## Password file format

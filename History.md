@@ -1,4 +1,19 @@
 
+6 Mar 2017
+
+- Remove YAML dependency
+- Use comment-json to support comments in json config files
+- Enhacements to UI: 
+  - support documentation in a folder identified by "doc.html" in package.json. Folder should have "index.html"
+  - add links to repo, documentation within GUI
+- Fix functional tests on windows
+
+2016
+
+- Support windows
+
+--- fork jamietre/sinopia
+
 7 Jun 2015, version 1.4.0
 
 - avoid sending X-Forwarded-For through proxies (issues [#19](https://github.com/rlidwka/sinopia/issues/19), [#254](https://github.com/rlidwka/sinopia/issues/254))

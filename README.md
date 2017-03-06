@@ -64,7 +64,7 @@ It allows you to have a local npm registry with zero configuration. You don't ha
 
 ```bash
 # installation and starting (application will create default
-# config in config.yaml you can edit later)
+# config in config.json you can edit later)
 $ npm install -g sinopia
 $ sinopia
 

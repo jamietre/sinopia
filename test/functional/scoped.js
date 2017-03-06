@@ -31,8 +31,9 @@ module.exports = function() {
                .status(200)
                .then(function (body) {
                  // not real sha due to utf8 conversion
-                 // TODO is this failing just because windows
-                 //assert.strictEqual(sha(body), 'c59298948907d077c3b42f091554bdeea9208964')
+                 
+                 // This test failed this year. Not sure why. Package appears correct.
+                 // assert.strictEqual(sha(body), 'c59298948907d077c3b42f091554bdeea9208964')
                  assert.strictEqual(sha(body), '2698bc2d06f49fd873ca285dae764a5a73cede2c')
                })
     })
@@ -42,8 +43,9 @@ module.exports = function() {
                .status(200)
                .then(function (body) {
                  // not real sha due to utf8 conversion
-                 //assert.strictEqual(sha(body), 'c59298948907d077c3b42f091554bdeea9208964')
-                 // TODO is this failing just because windows
+                 
+                 // This test failed this year. Not sure why. Package appears correct.
+                 // assert.strictEqual(sha(body), 'c59298948907d077c3b42f091554bdeea9208964')
                  assert.strictEqual(sha(body), '2698bc2d06f49fd873ca285dae764a5a73cede2c')
                })
     })
