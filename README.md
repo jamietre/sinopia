@@ -1,11 +1,17 @@
 `sinopia` - a private/caching npm repository server
 
-## This fork:
+## About this fork
+
+Sinopia is not maintained. This fork no longer attempts to sync with upstream. We are using this in-house for a caching server and private registry and occasionally add enhancements. 
+
+See also https://github.com/verdaccio/verdaccio - may try to merge enhancements here with that so we can benefit from community support there
 
 * Adds first-class windows support by using resource locking at the API level instead of depending on file-system locking
 * Fixes tests when running on windows
+* Includes plugins in main repo
 * Removes dependency on fs-ext
-
+* Uses json instead of yaml (all yaml dependencies are removed)
+* Adds some GUI enhancements (see history.md)
 
 ## To build/test:
 

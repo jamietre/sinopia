@@ -1,6 +1,6 @@
 {
   "name": "sinopia",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Private npm repository server",
   "author": {
     "name": "Alex Kocharin",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://costartfs:8080/tfs/CoStarCollection/CoStarSuite-Git/_git/sinopia"
+    "url": "https://github.com/jamietre/sinopia"
   },
   "main": "index.js",
   "bin": {
